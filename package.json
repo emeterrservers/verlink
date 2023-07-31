@@ -4,7 +4,7 @@
     "description": "MiroTalk WebRTC admin",
     "main": "server.js",
     "scripts": {
-        "start": "node backend/server.js",
+        "start": "pm2-runtime start backend/server.js",
         "env": "cp .env.template .env",
         "cfg": "cp backend/config.template.js backend/config.js",
         "mongo:up": "docker-compose -f docker-compose-mongo.yml up -d",
@@ -44,7 +44,8 @@
         "nodemailer": "^6.9.3",
         "swagger-ui-express": "^5.0.0",
         "twilio": "^4.13.0",
-        "yamljs": "^0.3.0"
+        "yamljs": "^0.3.0",
+        "pm2": "^5.2.2"
     },
     "devDependencies": {
         "prettier": "3.0.0"
